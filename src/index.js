@@ -1,10 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 function Greeting() {
-    return <h2> My First Component (Function) Cool</h2>;
+  return (
+    <div>
+      <Person />
+      <Message />
+    </div>
+  );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const Person = () => <h2>Ihshan Gumilar</h2>;
+const Message = () => {
+  return <p>this is my message bro !</p>;
+};
 
-root.render(<Greeting />)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<Greeting />);
