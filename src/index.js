@@ -1,20 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-function Greeting() {
+const BookList = () => {
   return (
-    <div>
-      <Person />
-      <Message />
-    </div>
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
-}
+};
 
-const Person = () => <h2>Ihshan Gumilar</h2>;
-const Message = () => {
-  return <p>this is my message bro !</p>;
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
+
+const Image = () => (
+  <img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51p2SDOCV9L._SX482_BO1,204,203,200_.jpg" />
+);
+
+const Title = () => <h2>I Love You to the Moon and Back</h2>;
+const Author = () => {
+  return <h4> Amelia Hepworth (Author), Tim Warnes (Illustrator) </h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Greeting />);
+root.render(<BookList />);
